@@ -1,0 +1,6 @@
+pandas
+flask
+xlrd
+XlsxWriter
+werkzeug
+mysqlclient

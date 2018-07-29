@@ -1,0 +1,166 @@
+{
+    "columnsDetail" : [
+        {
+            "columnName" : "A_number", 
+            "possibleValue" : [
+                "FROM", 
+                "Calling", 
+                "Calling No", 
+                "Calling (A)", 
+                "Calling (A) Party", 
+                "Calling (A) Party Telephone Number", 
+                "Calling (A) Party Telephone Number / MSISDN|Calling (LRN+A) Party Telephone Number", 
+                "CALLG PARTY NO", 
+                "Calling Number", 
+                "CALLINGMSISDN", 
+                "Calling_Party", 
+                "L3_CALLING_NUMBER"
+            ]
+        }, 
+        {
+            "columnName" : "B_number", 
+            "possibleValue" : [
+                "TO", 
+                "Called", 
+                "B_Number", 
+                "Called No", 
+                "Called Number", 
+                "CALLD PARTY NO", 
+                "Called (B)", 
+                "Called (B) Party", 
+                "Called (B) Party Telephone Number", 
+                "Called (LRN+B) Party Telephone Number", 
+                "LRN + Called (B) Party", 
+                "LRN + Called (B) Party Telephone Number / Access Point Name", 
+                "Called_Party", 
+                "L3_CALLED_NUMBER"
+            ]
+        }, 
+        {
+            "columnName" : "DATE", 
+            "possibleValue" : [
+                "Date", 
+                "Call Date", 
+                "Start_DT", 
+                "START DATE ", 
+                "CALL_DATE", 
+                "START_DATE"
+            ]
+        }, 
+        {
+            "columnName" : "TIME", 
+            "possibleValue" : [
+                "Time", 
+                "Call Time", 
+                "Call Initiation Time", 
+                "STARTTIME", 
+                "START_TIM", 
+                "CALL_TIME"
+            ]
+        }, 
+        {
+            "columnName" : "DUR", 
+            "possibleValue" : [
+                "dur", 
+                "Dur(s)", 
+                "DUR(SEC)", 
+                "DURATION", 
+                "DUR_IN_SECS", 
+                "DURATION IN SECS", 
+                "DURATION (SECONDS)", 
+                "BILL DURATION", 
+                "CALL DURATION", 
+                "Call Duration (in seconds)", 
+                "CALL DURATION (IN SECOND)", 
+                "Call Duration (Seconds)", 
+                "Billing_Duration", 
+                "CALL_DURATION"
+            ]
+        }, 
+        {
+            "columnName" : "CALL_TYPE", 
+            "possibleValue" : [
+                "Call Type", 
+                "Call Type (IN/OUT/SMS In/SMS OUT)", 
+                "CALL DIRECTION", 
+                "Type", 
+                "RECORDTYPE", 
+                "DIRECTION", 
+                "L9_RECORD_TYPE", 
+                "CALLTYPE"
+            ]
+        }, 
+        {
+            "columnName" : "CELL_1", 
+            "possibleValue" : [
+                "Cell1", 
+                "CELL_ID", 
+                "FIRST_CELL_ID", 
+                "FIRST CELL ID A", 
+                "First Cell ID of Party A", 
+                "First Cell ID/LOCATION AREA CODE", 
+                "First cell global Id(MCC-MNC-LAC-Site ID Code)", 
+                "Cell_Site_ID", 
+                "Term_BTS_First", 
+                "APARTYFIRSTCELL", 
+                "L9_FIRST_CELL_ID", 
+                "CELLID"
+            ]
+        }, 
+        {
+            "columnName" : "CELL_2", 
+            "possibleValue" : [
+                "Cell2", 
+                "LAST_CELL_ID", 
+                "LAST CELL ID A", 
+                "Last Cell ID of Party A", 
+                "Last Cell ID / PDP Address", 
+                "Last cell global Id (MCC-MNC-LAC-Site ID Code)", 
+                "LAST_CELL_ID_ORIGIN", 
+                "Term_BTS_Last", 
+                "BPARTYFIRSTCELL", 
+                "L9_LAST_CELL_ID"
+            ]
+        }, 
+        {
+            "columnName" : "IMEI", 
+            "possibleValue" : [
+                "IMEI", 
+                "ESN/IMEI", 
+                "IMEI/ESN", 
+                "IMEI (A)", 
+                "IMEI of A", 
+                "Term_IMEI", 
+                "ESN_or_IMEI_NO", 
+                "CALLINGPARTYIMEI", 
+                "L9_EQUIPMENT_ID"
+            ]
+        }, 
+        {
+            "columnName" : "IMSI", 
+            "possibleValue" : [
+                "IMSI", 
+                "IMSI No", 
+                "IMSI (A)", 
+                "IMSI of A", 
+                "IMSI/MIN", 
+                "MIN_or_IMSI_NO", 
+                "CALLINGPARTYIMSI", 
+                "EXTERNAL_ID", 
+                "A_IMSI"
+            ]
+        }, 
+        {
+            "columnName" : "ROAMING", 
+            "possibleValue" : [
+                "A_FIRST_ROAMING_NET_CIRCLE_ID", 
+                "FIRST ROAMING NETWORK CIRCLE ID OF A", 
+                "Roam Nw", 
+                "First Roaming Network Cell ID/PLMN ID", 
+                "ROAMING DETAILS", 
+                "ROAM_CIRCLE", 
+                "ROAMING_NW_CID"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Alite Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css">
+
+    <script src="{{ url_for('static',filename='javascript/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='javascript/materialize.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.modal').modal({dismissible: false});
+            $('#modal1').modal('close');
+
+            {% if alert %}
+                $('#modal1').modal('open');
+            {% endif %}
+        });
+
+        {% if i_filename %}
+
+            function load_status(){
+                $.ajax({
+                    type: "POST",
+                    url: "/status",
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    dataType: 'json',
+                    data: "filename={{ i_filename }}",
+                    success: function (data) {
+                        if ((data.status).localeCompare("DONE") == 0){
+                            var file_path = "/files/" + data.filename;
+                            document.getElementById("download-btn").href = file_path;
+                            clearInterval(timer_);
+                            $('#modal1').modal('close');
+                        }
+                    },
+                    error: function () {
+                        Materialize.toast('!', 8000, 'red');
+                    }
+                });
+
+            }
+
+            var timer_ = setInterval(function(){
+                            load_status()
+                        }, 10000);
+
+        {% endif %}
+
+    </script>
+
+</head>
+<body>
+
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo" style="margin-left: 1%">Alite Projects</a>
+    </div>
+ </nav>
+
+
+ <!-- loading Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content center-align">
+
+      <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div class="black-text">Processing the file.</div>
+        <div class="black-text">For upto 10 MB file, while take 1-2 minute(s).</div><br/>
+        <h5 class="red-text">DO NOT REFRESH/RELOAD THIS PAGE.</h5>
+    </div>
+  </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+          <div class="card white" style="margin-top: 25px">
+            <div class="card-content grey-text text-darken-2 center-align">
+              <span class="card-title">Download the File (one time clickable link)</span>
+                <br />
+                <a id="download-btn" href="" class="waves-effect waves-light btn">Click to Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+</body>
+</html>

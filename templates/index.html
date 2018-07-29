@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Alite Projects 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/materialize.css') }}" type="text/css">
+
+    <script src="{{ url_for('static',filename='javascript/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='javascript/materialize.min.js') }}"></script>
+
+    {% if alert %}
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    Materialize.toast('{{ alert }}', 8000, 'red');
+                });
+        </script>
+    {% endif %}
+
+</head>
+<body>
+
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo" style="margin-left: 1%">Alite Projects</a>
+    </div>
+ </nav>
+
+    <div class="container">
+         <div class="row">
+        <div class="col s12">
+          <div class="card white" style="margin-top: 25px">
+            <div class="card-content grey-text text-darken-3">
+              <span class="card-title">Upload the Report</span>
+
+                <div class="row"></div>
+
+              <form action="{{ url_for('download_page') }}" method="post" enctype="multipart/form-data" onsubmit="loading_()">
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>File</span>
+                    <input type="file" name="file">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                  </div>
+                </div>
+
+                  <div class="row">
+                      <br />
+                      <div class="col right">
+                        <button class="waves-effect waves-light btn" type="submit" value="submit">Upload</button>
+                      </div>
+                  </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
