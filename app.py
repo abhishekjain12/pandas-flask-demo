@@ -18,7 +18,7 @@ app = Flask(__name__)
 app.secret_key = "MyUniqueKey"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-db = MySQLdb.connect("localhost", "root", "root", "alite")
+db = MySQLdb.connect("localhost", "root", "root", "pandas-flask")
 
 
 def allowed_file(filename):

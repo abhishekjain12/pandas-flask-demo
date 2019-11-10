@@ -1,5 +1,6 @@
-#!/home/abhishek/Documents/OutSoucring/alite-projects-1/venv/bin/python
-
+#!/bin/sh
+'''exec' "/home/abhishek/Web/My Projects/pandas-flask-demo/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
